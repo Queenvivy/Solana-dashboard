@@ -6,11 +6,8 @@ import numpy as np
 st.set_page_config(layout="wide")
 st.title("Solana Transaction Analysis Dashboard")
 
-# Upload or Load CSV
-uploaded_file = st.file_uploader(r"C:\Users\DELL\OneDrive\Documents\dune solana transaction.csv", type=["csv"])
-
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+CSV_URL = "https://raw.githubusercontent.com/Queenvivy/Solana-dashboard/main/dune%20solana%20transaction.csv"
+df = pd.read_csv(CSV_URL)
 
     # === Chart 1: Wasted Capacity Pie Chart ===
     st.subheader("1. Solana Network Efficiency: Wasted Capacity")
